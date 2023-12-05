@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title style="font-family: 'Syne', serif";>soft maps</title>
+
+  <!-- <link rel="stylesheet"  type="text/css" href="style.css"> -->
+  <link href="style.css" type="text/css" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne+Tactile&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Syne+Tactile&display=swap" rel="stylesheet">
+  
+  <script src="../p5.min.js"></script>
+  <!-- <script src="../addons/p5.sound.js"></script>  -->
+  <script src="addons/p5.sound.js"></script> 
+  <!-- <script src="workingFile.js"></script> -->
+  <script src="script9.js"></script> 
+  <!-- <script src="path/to/p5.sound.js"></script> -->
+  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+
+
+ <!--  <script src="camera.js"></script>
+  <script src="drawshapes.js"></script> -->
+  <!-- <script src="vidpixel.js"></script> -->
+<!--   <script>new p5(leftSketch, 'left');
+new p5(rightSketch, 'right');</script> -->
+
+</head>
+
+<body>
+  <main>
+    <video autoplay muted loop id="myVideo">
+      <source src="assets/anotherexport.mp4" type="video/mp4">
+        
+  </video>
+<!--     <div id="left"></div>
+    <div id="right"></div> -->
+     <div onclick="introScreen();" id="blocker"><img src="assets/feet-pool.gif" style="max-width:40vw;min-width:50px"><h1>soft maps</h1> <p style="color:#E19292">click to enter</p></div>
+     <!-- <div class="video-container"> -->
+      <!-- <video autoplay muted loop id="myVideo"> 
+          <iframe src="https://www.youtube.com/embed/_v-625ILH_0?si=TyNPueAUP2Dx8_b8&autoplay=1&mute=1&rel=0" frameborder="0" allowfullscreen></iframe>
+      </video> -->
+      <!-- </div> -->
+
+    <!-- <div id="interface">Soft Maps</div> -->
+
+    <div class="flex-container">
+        <div style="flex-basis:200px" id="interface2-2"><h1>Soft Maps</h1></div>
+        
+        <div style="flex:20%" id="interface2-1">
+          <button onclick="showOrHideDiv4();">Info</button>
+          <button onclick="showOrHideDiv6();">Artists</button>
+
+        </div>
+        <div style="flex:60%" id="interface2-1">
+          <button onclick="showOrHideDiv();"><img src='assets/poolgrid3.png' class="img-responsive"></button>
+          <button onclick="showOrHideDiv2();"><img src="assets/algae4.png" class="img-responsive"></button>
+          <button onclick="showOrHideDiv3();"><img src="assets/tool2.png" class="img-responsive"></button>
+          <button onclick="showOrHideDiv5();"><img src="assets/tool3.png" class="img-responsive"></button>
+        </div>
+        
+
+
+    </div>
+    <div id="showBio"> <button onclick="showOrHideDiv4();" class=close4 id=cancel4>x</button> Soft maps attempts to re-build tools for navigation and orientation by looking at mapping through an alternative lens. Here, a swimming pool is our working model, and the act of cleaning the pool becomes an algorithm for mapping. We explore how tools and presence shape maps, forming a multi-perspective map & score that questions conventional cartographic practices. It matters which maps map maps.  <br>
+
+    What kind of maps get to shape our world? <br>
+
+    Who gets to build these maps and who they are built for ? <br>
+
+Working with our nonhuman collaborators we create localised cartographies which challenge the territories or narratives that maps claim to represent. <br>
+</div>
+    <div id="showAbout"> <img src="assets/anotherfeet.gif" alt="feet pool tools"> <button onclick="showOrHideDiv();" class=close id=cancel1>x</button></div>
+    <div id="showTool2"><button onclick="showOrHideDiv5();" class=cancel5 id=close5>x</button> Here our world is a swimming pool<br>We think about <br>
+    How tools shape actions<br>
+    How bodies activate tools<br>
+    How maps make worlds<br>
+     Use this page as a score and map to influence your journey. </div>
+
+    <div id="bio"> <button onclick="showOrHideDiv6();" class=cancel6 id=close6>x</button> Soft Maps is a collaboration between Pheobe riley Law and Lily McCraith<br><br>
+      Pheobe riley Law (1997) is an installation artist with a focus in sound, three dimensional art, and image. She takes a magpie approach which involves arranging and building relationships between different bodies, vessels or devices in order to create a dialogue. Prevailing interests include exploring the life of non-human actors  / inanimate objects and thinking about aspects of human activity through the lens of division and borders. <br>
+
+      She sometimes playfully reverses the roles of humans and non-humans, revealing the object-hood of the human essence, and an animate character of the ‘inanimate’ being. In one of her latest performance films, Machine Equities she explores the sonic landscape of machines as actors and collaborators. Previous and ongoing explorations focus on: mapping, machine technologies as our collaborators (both sonically and physically); the relationship we have to the natural world (including the livestock industry) and the role Salt has on aquatic life. <br>
+
+      Recent work includes Live set at Permian (Tokyo), the Science and Art festival (Matsudo, Tokyo), Bell (auto) + 2 at Apt Gallery and Crossovers collective (London), Machine Equities at Fabrica Research Centre (Treviso, Italy), Oh O Salinity at Humber Street Gallery, Hull Arts Research and Initiative centre, (Hull), The Hancock Museum, 36 Lime Street Gallery (Newcastle). Emerging Artist Installation at Delaval Hall (Northumberland), A layer of Liquid Water at Spikersuppa Gallery (Oslo, Norway), Residency and tour with Making tracks at Cove park (Scotland). Herd (Newcastle University) and further works at The Baltic, Hatton Gallery New- castle, The Republic Gallery (Blythe), Funen Art Academy Odense (Denmark), LevelOne Gallery Hamburg (Germany), Paradise Air (Japan), Detroit Gallery (Stockholm), Iklectik (London), Cafe Oto (London) & the Coachhouse (Brighton) and sound / score based performances at Ftarri (Tokyo), for BBC Radio 3, Fort Process.<br><br>
+      Instagram: @pheobelaw<br>
+      Website: https://pheoberileylaw.yolasite.com/ <br>
+      Bandcamp: https://pheoberileylaw.bandcamp.com/ <br>
+
+      <br><br>
+
+
+      🏝️Lily McCraith (1996)  🕸️ Is a designer / researcher / artist working across technologies and disciplines. Her work investigates systems, infrastructures and ecologies via active methods of research, enquiry and participation.  Lily works, often in collaboration and through situated approaches, making with film, objects, sound, visual communication, publishing and creative technology.<br>
+
+      Recent themes include deep sea mining, subterranean politics, community mapping , citizen science, DIY technologies, kites, digital twins, robots, AI, games, and role play as a methodology.<br>
+
+      🐛Recent work includes : Culturing the Deep Sea, workshop with Ocean Uni, Porto Design Biennale (2023), AI pedagogies, Science Gallery London (2023), A Cheap Day Out (2023), Resident at Fabrica Research Centre (2022-3), The All Rivers and Species Act, Workshops at Holland Festival & Fiber Festival (2022), Now Play This Game Design Lab at Somerset House (2022) Goethe Institut Artificial Intelligence Residency (2021), Makerversity Designer in Residence (2021), Reassemble Lab, Weaving with Worlds, Fiber Festival (2021), School of Speculation, South London Gallery & Design Museum (2019)<br>
+      <br>
+      Instagram:@lilymccraith<br>
+      lilymccraith.net<br>
+</div>
+    <div id="showMoreInfo"> <button onclick="showOrHideDiv2();" class=close2 id=cancel2>x</button><br>Pool as a map for living Algae<br><br>
+    Green algae — chlorophyta — is slimy — often found on pool surfaces. It appears in small clusters on pool steps or lurking in corners. Growing in under 24 hours. 
+    Brushing will remove it — but not destroy it. <br><br>
+
+    Yellow algae — phaeophyta –- has a fur pattern — it doesn't spread quickly but it’s harder to destroy.  Brushing it will not do much to remove it, apart from it’s the top layer of slime — exposes the algae underneath.<br><br>
+
+    Black — dives into hard surfaces like plastic and concrete — it’s mostly found in ponds but sometimes appears in unmaintained pools. use a stainless steel brush.<br><br>
+
+    Blue-green algae — cyanobacteria — bacteria that live in water or damp soil.<br><br>
+
+    Pink algae — bacteria — reddish-orangeish slime — Usually at the waterline of the swimming pool. Likes PVC surfaces in a pool, especially piping. Though easiest to navigate it often keeps the company of a white water mold, a fungus. <br><br>
+ </div></div>
+
+    <div id="infoBox"> <button onclick="showOrHideDiv3();" class=cancel4 id=close>x</button> <div id="app"></div></div>
+    
+
+  </main>
+</body>
+
+<!-- <script>
+    const targetDiv = document.getElementById("infoBox");
+    const btn = document.getElementById("toggle");
+    btn.onclick = function () {
+      if (targetDiv.style.display !== "none") {
+        targetDiv.style.display = "none";
+      } else {
+        targetDiv.style.display = "block";
+      }
+    };
+
+  
+  </script> -->
+
+  <script>
+    // function showCoords(e){let o="X: "+e.clientX+"\nY: "+e.clientY;document.getElementById("demo").innerHTML=o}
+    function showOrHideDiv(){const e=document.getElementById("showAbout");
+    document.querySelector("showAbout");
+    let o=getComputedStyle(showAbout).display;console.log(o),"none"===o?(e.style.display="block",console.log("1")):(e.style.display="none",console.log("2"));document.getElementById("cancel1").onclick=function(o){"block"===e.style.display&&(e.style.display="none")}}
+
+    function showOrHideDiv2(){const e=document.getElementById("showMoreInfo");document.querySelector("showMoreInfo");let o=getComputedStyle(showMoreInfo).display;console.log(o),"none"===o?(e.style.display="block",console.log("1")):(e.style.display="none",console.log("2"));document.getElementById("cancel2").onclick=function(o){"block"===e.style.display&&(e.style.display="none")}}
+
+    function showOrHideDiv3(){const e=document.getElementById("infoBox");document.querySelector("infoBox");let o=getComputedStyle(infoBox).display;console.log(o),"none"===o?(e.style.display="block",console.log("1")):(e.style.display="none",console.log("2"));document.getElementById("cancel3").onclick=function(o){"block"===e.style.display&&(e.style.display="none")}}
+
+    function showOrHideDiv4(){const e=document.getElementById("showBio");document.querySelector("showBio");let o=getComputedStyle(showBio).display;console.log(o),"none"===o?(e.style.display="block",console.log("1")):(e.style.display="none",console.log("2"));document.getElementById("cancel4").onclick=function(o){"block"===e.style.display&&(e.style.display="none")}}
+
+    function showOrHideDiv5(){const e=document.getElementById("showTool2");document.querySelector("showTool2");let o=getComputedStyle(showTool2).display;console.log(o),"none"===o?(e.style.display="block",console.log("1")):(e.style.display="none",console.log("2"));document.getElementById("cancel5").onclick=function(o){"block"===e.style.display&&(e.style.display="none")}}
+
+    function showOrHideDiv6(){const e=document.getElementById("bio");document.querySelector("bio");let o=getComputedStyle(bio).display;console.log(o),"none"===o?(e.style.display="block",console.log("1")):(e.style.display="none",console.log("2"));document.getElementById("cancel6").onclick=function(o){"block"===e.style.display&&(e.style.display="none")}}
+
+    function introScreen(){const e=document.getElementById("blocker");"block"===getComputedStyle(e).display&&(e.style.display="none")}
+
+    //draggable code
+
+//     window.onload=function(){dragable('showAbout','showAbout');}; 
+//       function get (el) {
+//     if (typeof el == 'string') return document.getElementById(el);
+//     return el;
+//       }
+
+//     function mouseX (e) {
+//       if (e.pageX) {
+//         return e.pageX;
+//       }
+//       if (e.clientX) {
+//         return e.clientX + (document.documentElement.scrollLeft ?
+//           document.documentElement.scrollLeft :
+//           document.body.scrollLeft);
+//       }
+//       return null;
+//     }
+
+    
+//      function mouseY (e) {
+//         if (e.pageY) {
+//           return e.pageY;
+//         }
+//         if (e.clientY) {
+//           return e.clientY + (document.documentElement.scrollTop ?
+//             document.documentElement.scrollTop :
+//             document.body.scrollTop);
+//         }
+//         return null;
+//       }
+
+
+//        function dragable (clickEl,dragEl) {
+//         var p = get(clickEl);
+//         var t = get(dragEl);
+//         var drag = false;
+//         offsetX = 0;
+//         offsetY = 0;
+//         var mousemoveTemp = null;
+
+//       if (t) {
+//         var move = function (x,y) {
+//           t.style.left = (parseInt(t.style.left)+x) + "px";
+//           t.style.top  = (parseInt(t.style.top) +y) + "px";
+//         }
+//         var mouseMoveHandler = function (e) {
+//           e = e || window.event;
+
+//           if(!drag){return true};
+
+//           var x = mouseX(e);
+//           var y = mouseY(e);
+//           if (x != offsetX || y != offsetY) {
+//             move(x-offsetX,y-offsetY);
+//             offsetX = x;
+//             offsetY = y;
+//           }
+//           return false;
+//         }
+//         var start_drag = function (e) {
+//           e = e || window.event;
+
+//           offsetX=mouseX(e);
+//           offsetY=mouseY(e);
+//           drag=true; // basically we're using this to detect dragging
+
+//           // save any previous mousemove event handler:
+//           if (document.body.onmousemove) {
+//             mousemoveTemp = document.body.onmousemove;
+//           }
+//           document.body.onmousemove = mouseMoveHandler;
+//           return false;
+//         }
+//         var stop_drag = function () {
+//           drag=false;      
+
+//           // restore previous mousemove event handler if necessary:
+//           if (mousemoveTemp) {
+//             document.body.onmousemove = mousemoveTemp;
+//             mousemoveTemp = null;
+//           }
+//           return false;
+//         }
+//         p.onmousedown = start_drag;
+//         p.onmouseup = stop_drag;
+//       }
+// }
+
+  </script>
+
+<script>
+  
+  var app = document.getElementById('app');
+
+    var typewriter = new Typewriter(app, {
+        loop: true
+    });
+
+    typewriter.typeString('Collaborators: Leaf Skimmer Pool Cleaning, Aquatic Scrub Pool Brush, L (LILY), P (PHEOBE), Green Algae, Yellow Algae, Black Algae, Blue-Green Algae, Pink Algae')
+        .pauseFor(2500)
+        .deleteAll()
+        .typeString('Leaf Skimmer Net enters delicately—— {0:23 seconds into frame}.—— Top left corner of the pool. Each surface of water is a layer, each layer becomes a threshold = A map with depth. ')
+        .pauseFor(2500)
+        .deleteAll()
+        .typeString('L follows with pool edges confining us to a direction and the skimmer takes control. Aquatic Scrub Pool Brush enters ——{0:28 SIF}—— diving directly through the depth of the pool. Scuffing edges, angle tied towards a straight line and finally bobbing in a floppy but steady bounce Parallel to Leaf Skimmer.')
+        .pauseFor(2500)
+        .deleteAll()
+        .typeString('P follows in a still motion, content after adhering to the current force of Aquatic scrub. Leaf Skimmer creates uneasy circular motions tilting round until centring again in the hope of catching dirt. All hopes are well intended but what Skim doesn’t know is that each molecule of dirt houses cellular bacteria and Algae - Green - Yellow - Black / Blue - Pink.')
+        .pauseFor(2500)
+        .deleteAll()
+        .typeString('In corners and shadows — places where pool circulation may not be optimum, homes grow. They arrived a few months ago when human owners left and they began to build community. “Building a lifelong home” was algae Pink’s ethos. Yellow and Black- blue were less hopeful since cousin Green lost two fragments of its cluster to a Net Cleaner last year. ')
+        .pauseFor(2500)
+        .deleteAll()
+        .typeString('L follows steady rounding back to Aquatic Scrub and then over-taking again. Leaf Skimmer reaches out of the water in the hands of L  {0:46 SIF} and bangs heavily, rhythmically and deliberately onto the grass. Small molecules of a bacteria are released and grass is left to swallow it.')
+        .pauseFor(2500)
+        .deleteAll()
+        .typeString('Aquatic Scrub is wavy and tilts sideways lifting up slightly from the floor tiles.  {0:48 SIF}  Hitting the water again we reach a corner {0:57 SIF}. Pink, blue Algae is collected as Aquatic Scrub slims the edges of each tile. Sweep, scrub, Skim, brush {1:26 SIF}.  Pink, Yellow, Green the pool is  a map for living algae. L and P crouch to see the surface.  Infiltrating the centre, Scrub meets Skimmer lifting upwards to reveal their dirt {1:09}.')
+        .pauseFor(2500)
+        .deleteAll()
+        .start();
+    </script>
+<!--     <script>
+        
+    $( function() {
+      $( "#draggable" ).draggable();
+    } );
+    </script> -->
+  
+
+
+</html>

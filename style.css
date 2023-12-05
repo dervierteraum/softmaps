@@ -1,0 +1,331 @@
+<style>
+  @font-face {
+     font-family: lilyFont;
+     src: url("../fonts/TINY5x3-200.woff2") format('woff2'), url("../fonts/TINY5x3-200.woff") format('woff');
+  }
+
+
+    #myVideo{
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1000000000000000000000000000;
+    }
+
+    .video-container{
+      position: fixed;
+      min-width: 100%;
+      min-height: 100%;
+/*      height: 100vh;*/
+      overflow: hidden;
+      z-index: -1000000000000000000000000000;
+    }
+
+    iframe {
+/*      position: fixed;*/
+      position: absolute;
+    /*  right: 0;
+      bottom: 0;*/
+      width: 100%;
+      height: 100%;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1000000000000000000000000000;
+      position: fixed;
+      left: 0;
+      top: 0;
+      background-size: cover;
+      background: no-repeat center;
+      margin-left: 50vw;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    body {
+      padding: 0;
+      margin: 0;
+      background-color: #E19292;
+       padding: 0;
+      margin: 0;
+      font-family: 'Kosugi Maru', arial, sans-serif;
+      background-size:100%;
+      background-repeat: repeat-y;
+      background-attachment: fixed;
+
+      height:100%;
+      width:100%;
+    }
+    button {
+      background-color: #E19292;
+      font-family: 'Kosugi Maru', arial, sans-serif;
+      font-size: 1.5em;
+      
+    }
+
+        /* Track */
+    ::-webkit-scrollbar-track {
+      background: rgb(220, 220, 220);
+    }
+
+    button img{
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+    }
+    #left{
+      display: block;
+    }
+    #right{
+      display: block;
+    }
+
+    #showAbout{
+      overflow-y: scroll;
+      display: none;
+      position: absolute;
+      bottom: 30%;
+      right: 45%;
+      margin: 100px auto;
+      width: 35%;
+      height: 30%;
+      font-family:'Kosugi Maru', arial, sans-serif;
+      font-size: 2em;
+    
+      background-color: #E19292;
+      border: 2px solid pink;
+      z-index: 100000000000000000;
+     
+  
+    }
+
+  
+
+
+    #showBio{
+      overflow-y: scroll;
+      display: none;
+      position: absolute;
+      bottom: 40%;
+      right: 65%;
+      margin: 100px auto;
+     /* width: 250px;
+      height: 300px;*/
+      width: 25%;
+      height: 35%;
+      font-family:'Kosugi Maru', arial, sans-serif;
+      font-size: 1.7em;
+      padding: 10px;
+      color: white;
+      background-color: #E19292;
+      border: 2px solid blue;
+      z-index: 100000000000000000;
+    }
+
+
+    #showMoreInfo{
+      overflow-y: scroll;
+      font-family:'Kosugi Maru', arial, sans-serif;
+      display: none;
+      position: absolute;
+     /* bottom: 20%;
+      right: 25%;*/
+      bottom: 10%;
+      right: 65%;
+      margin: 100px auto;
+      width: 20%;
+      height: 30%;
+      
+      font-size: 1.3em;
+      padding: 10px;
+      background-color: rgb(220, 220, 220);
+      border: 2px solid blue;
+      z-index: 100000000000000000;
+    }
+
+    #infoBox{
+      overflow-y: scroll;
+      display: none;
+      position: absolute;
+      margin: 100px auto;
+      bottom: 20%;
+      right: 25%;
+      width: 20%;
+      height: 30%;
+      font-family:'Kosugi Maru', arial, sans-serif;
+      font-size: 1.3em;
+      padding: 10px;
+      color: white;
+      background-color: blue;
+      border: 2px solid pink;
+      z-index: 100000000000000000;
+    }
+
+    #showTool2{
+      overflow-y: scroll;
+      display: none;
+      position: absolute;
+      bottom: 5%;
+      right: 35%;
+      margin: 100px auto;
+      width: 20%;
+      height: 20%;
+      font-family:'Kosugi Maru', arial, sans-serif;
+      font-size: 1.3em;
+      padding: 10px;
+      background-color: rgb(220, 220, 220);
+      border: 2px solid blue;
+      z-index: 100000000000000000;
+    }
+
+     #bio{
+      overflow-y: scroll;
+      display: none;
+      position: absolute;
+      bottom: 50%;
+      right: 25%;
+      margin: 100px auto;
+      width: 30%;
+      height: 30%;
+      font-family:monospace;
+      font-size: 1.3em;
+      padding: 10px;
+      background-color: rgb(220, 220, 220);
+      border: 2px solid blue;
+      z-index: 100000000000000000;
+    }
+
+    h1{
+      font-family: 'Kosugi Maru', arial, sans-serif;
+      font-size: 2em;
+     
+
+    }
+
+    #interface{
+      position: absolute;
+      width: 4.5vw;
+      height: 100%;
+      left: 0;
+      bottom: 0;
+      border:none;
+      padding:10px;
+
+   /*   border-right: 2px solid #00ff00;
+      border-left: 2px solid #00ff00;
+      border-bottom: 0px solid #00ff00;*/
+      color: #0000ff;
+      text-align: center;
+      font-size: 3em;
+      margin: auto;
+      writing-mode: vertical-lr;
+      transform: rotate(-180deg);
+    }
+    #interface2-1{
+      
+      padding:10px;
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      width:70%;
+      left:0;
+    }
+    #interface2-2{
+      
+      padding:10px;
+    }
+
+    #blocker{
+      z-index: 100000000;
+      position: fixed;
+      overflow: hidden;
+      color: #0000ff;
+      width: 100%;
+      height: 100%;
+      display: block;
+      text-align: center;
+      padding-top: 10%;
+      border: 0px solid #00ff00;
+      background-color: #ffffff;
+      font-family: 'Kosugi Maru';
+      font-size: 3em;
+    }
+
+/*    @media only screen and (min-width: 300px) and (max-width: 601px) { */
+        /* smartphones, Android phones, landscape iPhone */
+        /*  .flex-container {
+          display: flex;
+          flex-direction: column;
+          position: fixed;
+          width: 50%;
+          height: 100%;
+          right: 0;
+          padding:5px;
+          border:none;
+         
+          justify-content: center;
+          background-color: #E19292;
+
+          justify-content: space-between;
+          overflow: hidden;
+
+         }
+     } */   
+    /* When the browser is at least 600px and above */
+ /*   @media (max-width: 500px) {
+      .flex-container {
+        display: flex;
+        flex-direction: row;
+        position: fixed;
+        width: 100%;
+        height: 30%;
+        bottom: 0;
+        padding:5px;
+        border:none;
+       
+        justify-content: center;
+        background-color: #E19292;
+
+        justify-content: space-between;
+        overflow: hidden;
+      }
+    }*/
+
+    .flex-container{
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      position: fixed;
+      width: 15%;
+      height: 100%;
+      right: 0;
+      padding:5px;
+      border:none;
+      /*border-left: 2px solid #d8f9ff;
+      border-right: 2px solid #d8f9ff;
+      border-bottom: 2px solid #0d8f9ff;*/
+      justify-content: center;
+      background-color: #E19292;
+/*      background-color: rgb(255, 255, 255);*/
+      justify-content: space-between;
+      overflow: hidden;
+
+    }
+    #draggable { width: 150px; height: 150px; padding: 0.5em; }
+
+    /* Animation */
+    .anim-typewriter{
+      animation: typewriter 4s steps(44) 1s 1 normal both,
+                 blinkTextCursor 500ms steps(44) infinite normal;
+    }
+    @keyframes typewriter{
+      from{width: 0;}
+      to{width: 24em;}
+    }
+    @keyframes blinkTextCursor{
+      from{border-right-color: rgba(255,255,255,.75);}
+      to{border-right-color: transparent;}
+    }
+
+  </style>
