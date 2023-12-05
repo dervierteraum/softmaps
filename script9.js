@@ -1,6 +1,6 @@
 let linePoints = []; // Array to store points of the line
 let angle = 0; // Angle for the sine wave
-let frequency = 0.0003; // Controls the frequency of the wave
+let frequency = 0.0001; // Controls the frequency of the wave
 let amplitude = 700; // Controls the amplitude of the wave
 let segmentWidth = 5; // Width of each line segment
 let direction = 1; // 1 for moving right, -1 for moving left
@@ -133,15 +133,15 @@ function draw() {
  //    rect(300, 600, 100, 100);
  //  }
 
- if (bassMap > 15.7){
+
+if (bassMap > 15.7){
     // angle = bassFreq/2;
     // amplitude=50;
-    amplitude=100;
     // stroke(0, 255, 255);
     ellipse(100, 200, 100, 100);
-  } else if (trebMap >7.5 ){
+  } else if (trebMap >7.2 ){
     amplitude=300;
-     angle = trebleFreq/2;
+
     stroke(0, 0, 255);
     fill(255, 146, 146);
     ellipse(400, 600, 100, 100);
@@ -155,6 +155,30 @@ function draw() {
     rect(100, 300, 100, 100);
     fill(255, 146, 146);
   }
+ // if (bassMap > 15.7){
+ //    // angle = bassFreq/2;
+ //    // amplitude=50;
+ //    amplitude=100;
+ //    // stroke(0, 255, 255);
+ //    ellipse(100, 200, 100, 100);
+ //  } else if (trebMap >7.5 ){
+ //    amplitude=300;
+ //     angle = trebleFreq/2;
+ //    stroke(0, 0, 255);
+ //    fill(255, 146, 146);
+ //    ellipse(400, 600, 100, 100);
+
+
+ //  } else if (midMap <14){
+ //    angle = midMap/2;
+ //    stroke(255, 146, 146);
+ //    amplitude=100;
+ //    fill(255, 146, 146);
+ //    rect(100, 300, 100, 100);
+ //    fill(255, 146, 146);
+ //  }
+
+
   // if (bassMap > 70){
 
   //   // angle = bassFreq/2;
@@ -193,7 +217,7 @@ function draw() {
   }
 
   // Increment the angle for the sine wave
-  angle += frequency*(vol*800);
+  angle += frequency*(vol*500);
 
   // Check if the line has reached the right or left side of the canvas
   if (endX > width || endX < 0) {
